@@ -5514,6 +5514,7 @@ section.blue,
 section.tan {
 	padding: 80px 0;
 	position: relative;
+	background: transparent url('../img/section-shadow.png') no-repeat center top;
 }
 section.blue {
 	background-color: #748D9D;
