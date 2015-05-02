@@ -14,4 +14,15 @@ $(document).ready(function(){
 	    }
 	  });
 	});
+	
+	// set landing page intro to viewport height (or any other element, just use .viewport-height class )
+	function setHeight() {
+    	windowHeight = $(window).innerHeight();
+    	$('.viewport-height').css('min-height', windowHeight);
+  	};
+  	setHeight();
+
+	$(window).resize(function() {
+		setHeight();
+  	});
 });  // end docready

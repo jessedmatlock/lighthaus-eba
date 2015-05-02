@@ -5544,7 +5544,7 @@ section#footer {
 
 a.down-arrow {
 	display: block;
-	margin: 40px auto 40px;
+	margin: 60px auto 40px;
 	padding-top: 90px;
 	width: 100px;
 	height: 22px;
@@ -5570,6 +5570,10 @@ a.down-arrow {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	padding: 40px 0 40px;
+	min-height: 100vh;
+	text-align: center;
+	
 }
 #landing-intro p {
 	color: #fefefe;
@@ -5577,20 +5581,6 @@ a.down-arrow {
 #landing-intro #logo {
 	display: block;
 	margin: 40px auto 40px;
-	
-}
-
-#landing-intro {
-	padding: 40px 0 40px;
-	min-height: 680px;
-	text-align: center;
-}
-
-#landing-intro {
-	
-}
-
-#landing-intro {
 	
 }
 
