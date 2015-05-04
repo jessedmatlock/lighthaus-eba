@@ -192,6 +192,10 @@
 					$jobtitle = isset($_POST['jobtitle']) ? stripslashes(trim($_POST['jobtitle'])) : '';
 					$email = isset($_POST['email']) ? stripslashes(trim($_POST['email'])) : '';
 					$pattern  = '/[\r\n]|Content-Type:|Bcc:|Cc:/i';
+					// catch header injection
+				    if (preg_match($pattern, $fname) || preg_match($pattern, $lname) || preg_match($pattern, $email)) {
+				        die("Header injection detected");
+				    }
 
 					$headers  = 'MIME-Version: 1.1' . PHP_EOL;
 			        $headers .= 'Content-type: text/html; charset=utf-8' . PHP_EOL;
@@ -199,14 +203,9 @@
 			        $headers .= "Return-Path: $email" . PHP_EOL;
 			        $headers .= "Reply-To: $email" . PHP_EOL;
 			        $headers .= "X-Mailer: PHP/". phpversion() . PHP_EOL;
-			
-					$EmailTo = "jesse@revivemarketing.org";
+					//$EmailTo = "jesse@revivemarketing.org";					
+					$EmailTo = "donnafurno@gmail.com, kfdaly@yahoo.com";
 					$Subject = "Landing Page Contact";
-					
-					// catch header injection
-				    if (preg_match($pattern, $fname) || preg_match($pattern, $lname) || preg_match($pattern, $email)) {
-				        die("Header injection detected");
-				    }
 
 					// IF names or email is missing, they may have JS off... present an error message
 				    if (($fname=="")||($lname=="")||($email=="")) {
