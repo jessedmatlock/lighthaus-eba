@@ -47,9 +47,6 @@
 		    <div class="small-12 medium-12 large-12 columns">
 				<h1 class="text-center">Apply For Membership</h1>
 				<p class="text-center">Enter your contact information below to connect with the EBA. Someone will contact you with more information, including details on the qualification process.</p>
-				<?php
-				$action=$_REQUEST['action'];
-				if ($action==""): ?>
 				
 				<form action="" method="POST" accept-charset="utf-8" data-abide>
 					<div class="row">
@@ -182,64 +179,6 @@
 					</div><!-- end row -->
 					
 				</form>
-				<?php else: /* send the submitted data */ 
-					$EmailFrom = "From: $fname $lname<$email>\r\nReturn-path: $email";
-					$EmailTo = "jesse@revivemarketing.org";
-					$Subject = "Landing Page Contact";
-					$fname = Trim(stripslashes($_POST['fname'])); 
-					$lname = Trim(stripslashes($_POST['lname'])); 
-					$workphone = Trim(stripslashes($_POST['work-phone'])); 
-					$cellphone = Trim(stripslashes($_POST['cell-phone'])); 
-					$city = Trim(stripslashes($_POST['city'])); 
-					$state = Trim(stripslashes($_POST['state'])); 
-					$industry = Trim(stripslashes($_POST['industry'])); 
-					$company = Trim(stripslashes($_POST['company'])); 
-					$jobtitle = Trim(stripslashes($_POST['job-title'])); 
-					$email = Trim(stripslashes($_POST['email'])); 
-					$pattern  = '/[\r\n]|Content-Type:|Bcc:|Cc:/i';
-
-					// catch header injection
-				    if (preg_match($pattern, $fname) || preg_match($pattern, $lname) || preg_match($pattern, $email)) {
-				        die("Header injection detected");
-				    }
-
-					// IF names or email is missing, they may have JS off... present an error message
-				    if (($fname=="")||($lname=="")||($email=="")) {
-						echo "First and Last Name and Email Fields are required, please fill out the form again.";
-					// ELSE.. Let's create the message content and prepare to send it	
-				    } else {        
-						$Body = "";
-						$Body .= "Name: ";
-						$Body .= $fname.' '.$lname;
-						$Body .= "\n";
-						$Body .= "Work Ph: ";
-						$Body .= $workphone;
-						$Body .= "Cell Ph: ";
-						$Body .= $cellphone;
-						$Body .= "City & State: ";
-						$Body .= $city.', '.$state;
-						$Body .= "Industry: ";
-						$Body .= $industry;
-						$Body .= "Company: ";
-						$Body .= $company;
-						$Body .= "Job Title: ";
-						$Body .= $jobtitle;
-						$Body .= "\n";
-						$Body .= "Email: ";
-						$Body .= $email;
-						$Body .= "\n";
-
-						// send email 
-						$success = mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
-
-						// redirect to success page 
-						if ($success){
-						  echo "Email sent, thanks!";
-						} else{
-						  echo "There was an error....... uh oh.";
-						}
-				    } ?>
-				<?php endif; ?>
 		    </div><!-- end columns -->
 		</div><!-- end row -->
 	</section><!-- end section #.blue -->
