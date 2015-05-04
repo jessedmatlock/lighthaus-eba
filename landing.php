@@ -47,11 +47,8 @@
 		    <div class="small-12 medium-12 large-12 columns">
 				<h1 class="text-center">Apply For Membership</h1>
 				<p class="text-center">Enter your contact information below to connect with the EBA. Someone will contact you with more information, including details on the qualification process.</p>
-				<?php
-				$action=$_REQUEST['action'];
-				if ($action==""): ?>
-				
-				<form action="" method="POST" accept-charset="utf-8" data-abide>
+				<?php if(!isset($_POST['submit'])):  ?>
+				<form action="#apply" method="POST" accept-charset="utf-8" data-abide enctype="multipart/form-data">
 					<div class="row">
 					    <div class="small-12 medium-6 large-6 columns">
 						<label>
@@ -70,11 +67,11 @@
 					<div class="row">
 					    <div class="small-12 medium-6 large-6 columns">
 						<label>
-					        <input type="text" name="work-phone"  id="work-phone" value="" placeholder="WORK PHONE" />
+					        <input type="text" name="workphone"  id="workphone" value="" placeholder="WORK PHONE" />
 					    </div><!-- end columns -->
 					    <div class="small-12 medium-6 large-6 columns">
 						<label>
-					        <input type="text" name="cell-phone"  id="cell-phone" value="" placeholder="CELL PHONE" />
+					        <input type="text" name="cellphone"  id="cellphone" value="" placeholder="CELL PHONE" />
 					    </div><!-- end columns -->
 					</div><!-- end row -->
 					
@@ -164,7 +161,7 @@
 					<div class="row">
 					    <div class="small-12 medium-6 large-6 columns">
 						<label>
-					        <input type="text" name="job-title"  id="job-title" value="" placeholder="JOB TITLE" required pattern="[a-zA-Z]+" />
+					        <input type="text" name="jobtitle"  id="jobtitle" value="" placeholder="JOB TITLE" required pattern="[a-zA-Z]+" />
 						  	<small class="error">A valid Job Title is required.</small>
 						</label>
 					    </div><!-- end columns -->
@@ -177,27 +174,35 @@
 					</div><!-- end row -->
 					<div class="row">
 					    <div class="small-width medium-width large-width columns">
-					        <button id="" class="button blue-button">SUBMIT APPLICATION</button>
+					        <button id="submit" name="submit" class="button blue-button">SUBMIT APPLICATION</button>
 					    </div><!-- end columns -->
 					</div><!-- end row -->
 					
 				</form>
-				<?php else: /* send the submitted data */ 
-					$EmailFrom = "From: $fname $lname<$email>\r\nReturn-path: $email";
-					$EmailTo = "jesse@revivemarketing.org";
-					$Subject = "Landing Page Contact";
-					$fname = Trim(stripslashes($_POST['fname'])); 
-					$lname = Trim(stripslashes($_POST['lname'])); 
-					$workphone = Trim(stripslashes($_POST['work-phone'])); 
-					$cellphone = Trim(stripslashes($_POST['cell-phone'])); 
-					$city = Trim(stripslashes($_POST['city'])); 
-					$state = Trim(stripslashes($_POST['state'])); 
-					$industry = Trim(stripslashes($_POST['industry'])); 
-					$company = Trim(stripslashes($_POST['company'])); 
-					$jobtitle = Trim(stripslashes($_POST['job-title'])); 
-					$email = Trim(stripslashes($_POST['email'])); 
+				<?php else:
+					
+					$fname = isset($_POST['fname']) ? stripslashes(trim($_POST['fname'])) : '';
+					$lname = isset($_POST['lname']) ? stripslashes(trim($_POST['lname'])) : '';
+					$workphone = isset($_POST['workphone']) ? stripslashes(trim($_POST['workphone'])) : '';
+					$cellphone = isset($_POST['cellphone']) ? stripslashes(trim($_POST['cellphone'])) : '';
+					$city = isset($_POST['city']) ? stripslashes(trim($_POST['city'])) : '';
+					$state = isset($_POST['state']) ? stripslashes(trim($_POST['state'])) : '';
+					$industry = isset($_POST['industry']) ? stripslashes(trim($_POST['industry'])) : '';
+					$company = isset($_POST['company']) ? stripslashes(trim($_POST['company'])) : '';
+					$jobtitle = isset($_POST['jobtitle']) ? stripslashes(trim($_POST['jobtitle'])) : '';
+					$email = isset($_POST['email']) ? stripslashes(trim($_POST['email'])) : '';
 					$pattern  = '/[\r\n]|Content-Type:|Bcc:|Cc:/i';
 
+					$headers  = 'MIME-Version: 1.1' . PHP_EOL;
+			        $headers .= 'Content-type: text/html; charset=utf-8' . PHP_EOL;
+			        $headers .= "From: $fname $lname <$email>" . PHP_EOL;
+			        $headers .= "Return-Path: $email" . PHP_EOL;
+			        $headers .= "Reply-To: $email" . PHP_EOL;
+			        $headers .= "X-Mailer: PHP/". phpversion() . PHP_EOL;
+			
+					$EmailTo = "jesse@revivemarketing.org";
+					$Subject = "Landing Page Contact";
+					
 					// catch header injection
 				    if (preg_match($pattern, $fname) || preg_match($pattern, $lname) || preg_match($pattern, $email)) {
 				        die("Header injection detected");
@@ -205,38 +210,47 @@
 
 					// IF names or email is missing, they may have JS off... present an error message
 				    if (($fname=="")||($lname=="")||($email=="")) {
-						echo "First and Last Name and Email Fields are required, please fill out the form again.";
+						echo "First, Last Name and Email Fields are required, please fill out the form again.";
 					// ELSE.. Let's create the message content and prepare to send it	
 				    } else {        
 						$Body = "";
-						$Body .= "Name: ";
+						$Body .= "<strong>Name:</strong> ";
 						$Body .= $fname.' '.$lname;
-						$Body .= "\n";
-						$Body .= "Work Ph: ";
-						$Body .= $workphone;
-						$Body .= "Cell Ph: ";
-						$Body .= $cellphone;
-						$Body .= "City & State: ";
+						$Body .= "<br/>";
+						if($workphone !== ""){
+							$Body .= "<strong>Work Ph:</strong> ";							
+							$Body .= $workphone;
+							$Body .= "<br/>";						
+						}
+						if($cellphone !== ""){
+							$Body .= "<strong>Cell Ph:</strong> ";							
+							$Body .= $cellphone;
+							$Body .= "<br/>";						
+						}
+						$Body .= "<strong>City & State:</strong> ";
 						$Body .= $city.', '.$state;
-						$Body .= "Industry: ";
+						$Body .= "<br/>";												
+						$Body .= "<strong>Industry:</strong> ";
 						$Body .= $industry;
-						$Body .= "Company: ";
+						$Body .= "<br/>";												
+						$Body .= "<strong>Company:</strong> ";
 						$Body .= $company;
-						$Body .= "Job Title: ";
-						$Body .= $jobtitle;
-						$Body .= "\n";
-						$Body .= "Email: ";
+						$Body .= "<br/>";												
+						$Body .= "<strong>Job Title:</strong> ";
+						$Body .= $jobtitle;						
+						$Body .= "<br/>";
+						$Body .= "<strong>Email:</strong> ";
 						$Body .= $email;
-						$Body .= "\n";
+						$Body .= "<br/>";
 
 						// send email 
-						$success = mail($EmailTo, $Subject, $Body, "From: <$EmailFrom>");
+						$success = mail($EmailTo, $Subject, $Body, $headers);
 
 						// redirect to success page 
 						if ($success){
-						  echo "Email sent, thanks!";
+						  echo '<div class="panel radius callout">Your information was successfully sent. Thank you!</div>';
 						} else{
-						  echo "There was an error....... uh oh.";
+						  echo '<div class="panel radius">There was an error and we have been notified.</div>';
 						}
 				    } ?>
 				<?php endif; ?>

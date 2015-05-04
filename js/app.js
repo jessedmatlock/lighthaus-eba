@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	$(document).foundation();
 	// smooth scrolling for any link targetting an existing ID
 	$(function() {
 	  $('a[href*=#]:not([href=#])').click(function() {
