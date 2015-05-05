@@ -35,8 +35,8 @@
 		<div class="row">
 		    <div class="small-12 medium-12 large-12 columns">
 				<img src="img/logo.png"  class="" id="logo"  alt="" />
-				<h1 class="">Peer-to-peer networking for executives</h1>
-				<p>Each EBA member is the owner, founder, or holds a senior position at their company. This means everyone you connect with through our group is a decision maker at their organization. Apply for memebrship today, and if you qualify, see why at the EBA, we mean business.</p>
+				<h1 class="">Peer-to-peer Networking For Executives</h1>
+				<p>Each EBA member is the owner, founder, or holds a senior position at their business. This means everyone you connect with through our group is a decision maker at their organization. Apply for membership today. If you qualify, see why, at the EBA we mean business.</p>
 				<a href="#apply" id="" class="down-arrow">Apply Now</a>
 		    </div><!-- end columns -->
 		</div><!-- end row -->
@@ -45,8 +45,8 @@
 	<section id="apply" class="blue">
 		<div class="row">
 		    <div class="small-12 medium-12 large-12 columns">
-				<h1 class="text-center">Apply For Membership</h1>
-				<p class="text-center">Enter your contact information below to connect with the EBA. Someone will contact you with more information, including details on the qualification process.</p>
+				<h1 class="text-center">Apply For Membership Today</h1>
+				<p class="text-center">Enter your contact information below to connect with the EBA.</p>
 				<?php if(!isset($_POST['submit'])):  ?>
 				<form action="#apply" method="POST" accept-charset="utf-8" data-abide enctype="multipart/form-data">
 					<div class="row">
@@ -204,7 +204,7 @@
 			        $headers .= "Reply-To: $email" . PHP_EOL;
 			        $headers .= "X-Mailer: PHP/". phpversion() . PHP_EOL;
 					//$EmailTo = "jesse@revivemarketing.org";					
-					$EmailTo = "donnafurno@gmail.com, kfdaly@yahoo.com";
+					$EmailTo = "donnafurno@gmail.com, kfdaly@yahoo.com, glenn@lighthausdesign.com";
 					$Subject = "Landing Page Contact";
 
 					// IF names or email is missing, they may have JS off... present an error message
