@@ -3179,7 +3179,8 @@ a {
   line-height: inherit;
   text-decoration: none; }
   a:hover, a:focus {
-    color: #db651a; }
+    color: #000;
+    }
   a img {
     border: none; }
 
@@ -5437,7 +5438,7 @@ th.hide-for-touch {
 
   a,
   a:visited {
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   a[href]:after {
@@ -5630,7 +5631,9 @@ section.background form input {
 section#footer a {
 	color: #392C26;
 	font-weight: 300;
-	text-decoration: underline;
+}
+section#footer #copy a {
+	text-decoration: underline;	
 }
 section#footer {
 	color: #392C26;
@@ -5655,6 +5658,21 @@ section#footer img#footer-logo {
 	display: block;
 	margin: 20px auto 40px;
 }
+ul.quick-links {
+	list-style: none;
+	margin: 0;
+}
+ul.quick-links li {
+	
+}
+
+ul.quick-links li a {
+	text-decoration: none;
+}
+ul.quick-links li a:hover {
+	color: #000 !important;
+}
+
 a.down-arrow {
 	display: block;
 	margin: 60px auto 40px;
