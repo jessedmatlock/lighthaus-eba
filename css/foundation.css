@@ -5666,6 +5666,10 @@ a.down-arrow:focus {
 	min-height: 100vh;
 	text-align: center;
 }
+#landing-intro.short-intro {
+	height: auto;
+	min-height: 0;
+}
 #landing-intro p,
 #landing-intro h1 {
 	color: #fefefe;
