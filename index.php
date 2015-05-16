@@ -31,6 +31,8 @@
 	<![endif]-->
 </head>
 <body>
+	<?php /*
+	
 	<header id="header" class="contain-to-grid">
 		<nav class="top-bar" data-topbar role="navigation">
 		  <ul class="title-area">
@@ -54,9 +56,16 @@
 		        </ul>
 		      </li>
 		    </ul>
+
+		    <!-- Left Nav Section 
+		    <ul class="left">
+		      <li><a href="#">Left Nav Button</a></li>
+		    </ul>
+			-->	
 		  </section>
 		</nav>
 	</header><!-- end header #. -->
+	*/ ?>
 	<section id="homepage" class="background text-center">
 		<div class="row">
 		    <div class="small-12 medium-12 large-12 columns">
@@ -82,7 +91,7 @@
 		    <div class="small-12 medium-12 large-12 columns">
 				<h2 class="text-center">With only executive members you know you’re networking with decision makers</h2>
 				<p class="text-center">How is the Executive Business Alliance different that other online networking platforms? Simply put, we don’t just let anybody join. Here at EBA we only accept C level people and above. This ensures that you’re connecting with the high-level decision makers who you want to meet. We’re so confident that you will be impressed with our membership that we even have a free trial, and a money back guarantee.</p>
-				<a href="javascript:void(0);" id="" class="button cta-button">APPLY FOR MEMBERSHIP</a>
+				<a href="landing.php" id="" class="button cta-button">APPLY FOR MEMBERSHIP</a>
 		    </div><!-- end columns -->
 		</div><!-- end row -->
 	</section><!-- end section #.blue -->
@@ -109,7 +118,7 @@
 						<p class="sub-text">Take advantage of exclusive offers and discounts to a variety of leading online services and shopping websites. </p>
 				    </div><!-- end columns -->
 				</div><!-- end row -->
-				<a href="javascript:void(0);"  class="button secondary cta-button">LEARN MORE</a>
+				<a href="landing.php"  class="button secondary cta-button">LEARN MORE</a>
 		    </div><!-- end columns -->
 		</div><!-- end row -->
 		
@@ -157,19 +166,19 @@
 				<div id="copy">© 2015 Executive Business Alliance. This website was created by <a href="http://lighthausdesign.com"  class="">Lighthaus Design</a>.</div><!-- end div#copy -->
 		    </div><!-- end columns -->
 		    <div class="small-width medium-12 large-4 columns">
-		        <h4 class="">Quick Links</h4>
+		        <!--h4 class="">Quick Links</h4>
 				<ul  class="quick-links">
 					<li><a href="javascript:void(0);" class="">Member Login</a></li>
 					<li><a href="javascript:void(0);" class="">Apply For Membership</a></li>
 					<li><a href="javascript:void(0);" class="">Partners</a></li>
 					<li><a href="javascript:void(0);" class="">FAQs</a></li>
 					<li><a href="javascript:void(0);" class="">Press Room</a></li>
-				</ul>
+				</ul-->
 		    </div><!-- end columns -->
 		    <div class="small-width medium-12 large-4 columns">
 		        <h4 class="">Get Updates</h4>
 				<p>Want to receive all of the latest updates with what’s happening with the EBA and it’s members?</p>
-				<a href="javascript:void(0);"  class="button cta-button small">SIGN UP FOR OUR NEWSLETTER</a>
+				<!--a href="javascript:void(0);"  class="button cta-button small">SIGN UP FOR OUR NEWSLETTER</a-->
 		    </div><!-- end columns -->
 		</div><!-- end row -->
 				

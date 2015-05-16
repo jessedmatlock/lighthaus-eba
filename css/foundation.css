@@ -72,7 +72,11 @@ body {
   margin: 0;
   padding: 0;
   position: relative; }
-
+@media only screen and (min-width: 64.0625em) {
+	body.inner-content {
+		padding-top: 140px;
+	}
+}
 a:hover {
   cursor: pointer; }
 
@@ -129,7 +133,7 @@ select {
 
 .row {
   margin: 0 auto;
-  max-width: 62.5em;
+  max-width: 68.75em;
   width: 100%; }
   .row:before, .row:after {
     content: " ";
@@ -1173,6 +1177,11 @@ button, .button {
   color: #FFFFFF;
   transition: background-color 300ms ease-out;
   letter-spacing: 1px; }
+ 
+form button,
+form .button {
+  padding: 0.65rem 2.5rem 0.85rem 2.5rem;
+}
   button:hover, button:focus, .button:hover, .button:focus {
     background-color: #fff; }
   button:hover, button:focus, .button:hover, .button:focus {
@@ -1248,8 +1257,11 @@ button.button-link,
 	margin: 0;
 	border-width: 0;
 }
-.cta-button {
-	min-width: 300px;
+@media only screen and (min-width: 50em) {
+	.cta-button {
+		min-width: 300px;
+		max-width: 100% !important;
+	}
 }
 
   button.disabled, button[disabled], .button.disabled, .button[disabled] {
@@ -1342,6 +1354,18 @@ button::-moz-focus-inner {
 form {
   margin: 0 0 1rem; }
 
+form.blue-form {
+	background: #748D9D;
+	color: #fff;
+	padding: 40px;
+}
+form.blue-form h1,
+form.blue-form h2, 
+form.blue-form h3,
+form.blue-form p,
+form.blue-form ul li a {
+	color: #fff;
+}
 /* Using forms within rows, we need to set some defaults */
 form .row .row {
   margin: 0 -0.5rem; }
@@ -1999,7 +2023,7 @@ meta.foundation-mq-topbar {
   .contain-to-grid .top-bar {
     margin-bottom: 0;
     margin: 0 auto;
-    max-width: 62.5em; }
+    max-width: 68.75em; }
 
   .top-bar-section {
     transition: none 0 0;
@@ -2871,11 +2895,14 @@ ul.pagination {
   display: block;
   margin-left: -0.3125rem;
   min-height: 1.5rem; }
+form ul.pagination {
+	margin-bottom: 0;
+}
   ul.pagination li {
     color: #222222;
-    font-size: 0.875rem;
+    font-size: 1rem;
     height: 1.5rem;
-    margin-left: 0.3125rem; }
+ }
     ul.pagination li a, ul.pagination li button {
       border-radius: 3px;
       transition: background-color 300ms ease-out;
@@ -2885,11 +2912,12 @@ ul.pagination {
       font-size: 1em;
       font-weight: normal;
       line-height: inherit;
-      padding: 0.0625rem 0.625rem 0.0625rem; }
+      padding: 0.0625rem 0.5rem 0.0625rem; }
     ul.pagination li:hover a,
     ul.pagination li a:focus, ul.pagination li:hover button,
     ul.pagination li button:focus {
-      background: #e6e6e6; }
+      background: #e6e6e6;
+      color: #748D9D; }
     ul.pagination li.unavailable a, ul.pagination li.unavailable button {
       cursor: default;
       color: #999999; }
@@ -3168,7 +3196,15 @@ hr {
   clear: both;
   height: 0;
   margin: 1.25rem 0 1.1875rem; }
-
+.orange-text {
+	color: #E67C3E;
+}
+.brown-text {
+	color: #392C26;
+}
+.display-block {
+	display: block;
+}
 /* Helpful Typography Defaults */
 em,
 i {
@@ -3458,7 +3494,7 @@ blockquote p {
     .reveal-modal {
       left: 0;
       margin: 0 auto;
-      max-width: 62.5em;
+      max-width: 68.75em;
       right: 0;
       width: 80%; } }
   @media only screen and (min-width: 40.0625em) {
@@ -3474,35 +3510,35 @@ blockquote p {
     .reveal-modal.tiny {
       left: 0;
       margin: 0 auto;
-      max-width: 62.5em;
+      max-width: 68.75em;
       right: 0;
       width: 30%; } }
   @media only screen and (min-width: 40.0625em) {
     .reveal-modal.small {
       left: 0;
       margin: 0 auto;
-      max-width: 62.5em;
+      max-width: 68.75em;
       right: 0;
       width: 40%; } }
   @media only screen and (min-width: 40.0625em) {
     .reveal-modal.medium {
       left: 0;
       margin: 0 auto;
-      max-width: 62.5em;
+      max-width: 68.75em;
       right: 0;
       width: 60%; } }
   @media only screen and (min-width: 40.0625em) {
     .reveal-modal.large {
       left: 0;
       margin: 0 auto;
-      max-width: 62.5em;
+      max-width: 68.75em;
       right: 0;
       width: 70%; } }
   @media only screen and (min-width: 40.0625em) {
     .reveal-modal.xlarge {
       left: 0;
       margin: 0 auto;
-      max-width: 62.5em;
+      max-width: 68.75em;
       right: 0;
       width: 95%; } }
   .reveal-modal.full {
@@ -3517,7 +3553,7 @@ blockquote p {
       .reveal-modal.full {
         left: 0;
         margin: 0 auto;
-        max-width: 62.5em;
+        max-width: 68.75em;
         right: 0;
         width: 100%; } }
   .reveal-modal.toback {
@@ -5461,7 +5497,7 @@ th.hide-for-touch {
 	text-align: left;
 }
 
-Header {
+header {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -5477,6 +5513,9 @@ section.background {
 	position: relative;
 	background: transparent url('../img/section-shadow.png') no-repeat center top;
 	z-index: 0;
+}
+section.med-padding {
+	padding: 50px 0;
 }
 section.blue h1,
 section.blue h2,
@@ -5608,11 +5647,11 @@ a.down-arrow {
 	color: #fff;
 	background: url('../img/down-arrow.png') no-repeat center top;
 }
-.button.blue-button {
-	background: #748D9D;
-	border:1px solid #fff;
-	display: block;
-	margin: 20px auto;
+a.down-arrow:hover {
+	color: #738D9E;
+}
+a.down-arrow:focus {
+	outline: none;
 }
 /* @end */
 
@@ -5627,7 +5666,8 @@ a.down-arrow {
 	min-height: 100vh;
 	text-align: center;
 }
-#landing-intro p {
+#landing-intro p,
+#landing-intro h1 {
 	color: #fefefe;
 }
 #landing-intro #logo {
@@ -5653,4 +5693,181 @@ social-icons li a {
 }
 .social-icons li a:hover {
 	color: #392C26;
+}
+
+#inner-header {
+	background: #262626;
+	min-height: 140px;
+	position: relative;
+}
+#inner-header #inner-logo {
+	display: block;
+	margin: 20px auto 0;
+	text-align: center;
+}
+#inner-header #inner-logo img {
+	display: block;
+	margin: 0 auto;
+	width: 187px;
+	height: 83px;
+}
+#inner-header #inner-nav {
+	list-style: none;
+	margin-top: 30px;
+}
+#inner-header #inner-nav li {
+	text-align: center;
+}
+#inner-header #inner-nav li a {
+	text-align: center;
+	color: #939393;
+	text-transform: uppercase;
+	padding-bottom: 4px;
+	border-bottom: 1px solid #262626;
+}
+#inner-header #inner-nav li a img {
+	display: block;
+	margin: 0 auto 5px;
+	opacity: 0.5;
+}
+#inner-header #inner-nav li a:hover,
+#inner-header #inner-nav li.active a {
+	color: #fff;
+	border-bottom-color: #939393;
+}
+#inner-header #inner-nav li a:hover img,
+#inner-header #inner-nav li.active a img {
+	opacity: 1;
+}
+@media only screen and (min-width: 64.0625em) {
+	#inner-header {
+		position: fixed;
+	}
+	#inner-header #inner-logo {
+		display: block;
+		float: left;
+		margin: 20px auto 0;
+	}
+	#inner-header #inner-logo img {
+		margin-left: 10px;
+	}
+	
+}
+
+
+
+
+
+
+.sort-by {
+	padding: 20px 0;
+	border-bottom: 1px solid #B9C6CE;
+}
+.sort-by .list-title {
+	color: #392C26;
+	font: 300 22px/1.2 "Ubuntu", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	margin: 0;
+}
+.sort-by .inline-list {
+	margin: 0;
+}
+.sort-by .inline-list li label {
+	color: #736B66;
+	font: 300 22px/1.2 "Ubuntu", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+	display: in;
+}
+.sort-by .inline-list li input {
+	margin: 0 0 5px;
+	vertical-align: middle;
+}
+
+.member {
+	position: relative;
+	padding: 50px 0 50px 0;	
+	text-align: center;
+	border-bottom: 1px solid #B9C6CE;
+	
+}
+
+.member .member-thumb {
+	padding: 10px;
+	border: 1px solid #B9C6CE;
+	width: 188px;
+	margin: 0 auto;
+}
+
+.member .member-thumb img {
+	width: 174px;
+	height: 174px;
+}
+
+.member .member-content {
+	
+}
+.member .member-content .member-name {
+	margin: 0;
+	color: #E57B3E;
+	font: 32px;
+}
+.member .member-content .member-company {
+	font-weight: 300;
+	font-size: 18px;
+	margin: 0 0 10px;
+}
+.member .member-content ul.member-meta {
+	margin: 0 0 10px;
+	border-top: 1px dashed #B9C6CE;
+	border-bottom: 1px dashed #B9C6CE;
+	padding: 10px 0 0;
+}
+.member .member-content ul.member-meta li {
+	padding-bottom: 10px;
+	padding-left: 0;
+}
+.member .member-content .member-bio {
+	color: #C3BFBD;
+	font-size: 18px;
+	line-height: 1.4;
+}
+
+.member  .member-button {
+	margin: 0 auto;
+}
+@media only screen and (min-width: 50em) {
+	.member {
+		padding: 50px 0 50px 220px;
+		text-align: left;	
+	}
+	.member .member-thumb {
+		position: absolute;
+		left: 0;
+		top: 50px;
+	}
+	.member  .member-button {
+		position: absolute;
+		top: 50px;
+		right: 0;
+		margin: 0;
+	}
+	.member .member-content .member-bio {
+		margin: 0;
+	}
+
+}
+
+.icon-nav li a {
+	text-align: center;
+	color: #fff;
+	opacity: 0.25;
+	font-weight: normal;
+	
+}
+.icon-nav li a img {
+	display: block;
+	margin: 0 auto 10px;
+	opacity: 0.25;
+}
+.icon-nav li a:hover,
+.icon-nav li a:hover img {
+	opacity: 1;
 }

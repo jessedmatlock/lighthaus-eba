@@ -173,8 +173,8 @@
 					    </div><!-- end columns -->
 					</div><!-- end row -->
 					<div class="row">
-					    <div class="small-width medium-width large-width columns">
-					        <button id="submit" name="submit" class="button blue-button">SUBMIT APPLICATION</button>
+					    <div class="small-width medium-width large-width columns text-center">
+					        <button id="submit" name="submit" class="button cta-button">SUBMIT APPLICATION</button>
 					    </div><!-- end columns -->
 					</div><!-- end row -->
 					
@@ -259,7 +259,7 @@
 	
 	<section id="footer" class="tan">
 		<div class="row">
-		    <div class="small-12 medium-12 large-12 columns">
+		    <div class="small-12 medium-12 large-12 columns text-center">
 				<img src="img/footer-logo.png"  class="" id="footer-logo"  alt="" />
 				<div id="copy">© 2015 Executive Business Alliance. This website was created by <a href="http://lighthausdesign.com"  class="">Lighthaus Design</a>.</div><!-- end div#copy -->
 		    </div><!-- end columns -->
