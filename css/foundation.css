@@ -1903,21 +1903,27 @@ meta.foundation-mq-topbar {
       padding: 12px 0 12px 0.9375rem;
       text-transform: none;
       width: 100%; }
+      
       #header .top-bar-section ul.right > li:hover > a,
       #header .top-bar-section ul.right > li.has-dropdown:hover > a {
-      	color: #fff !important;
+      	color: #fff;
       	background: rgba(255, 255, 255, 0.0001);   
       }
-    .top-bar-section > ul > li:hover:not(.has-form) > a,
+      #header .top-bar-section ul.right > li:hover:not(.has-dropdown) > a {            	      
+      	border-color: rgba(255, 255, 255, 0.5);      	
+      }
+    .top-bar-section > ul > li:hover:not(.has-form) > a {
+    	
+    }
     .top-bar-section ul li.has-dropdown:hover > a {
       color: #fff;
       background: rgba(0, 0, 0, 0.65) !important; 
       }
     .top-bar-section ul li.active > a {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.001);
       color: #fff; }
       .top-bar-section ul li.active > a:hover {
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.001);
         color: #FFFFFF; }
   .top-bar-section .has-form {
     padding: 0.9375rem; }
@@ -2056,19 +2062,21 @@ meta.foundation-mq-topbar {
       .top-bar-section ul li {
         float: left; }
         .top-bar-section > ul > li > a {
-        	text-transform: uppercase;        	
+        	text-transform: uppercase;  
+        	border-bottom: 1px solid rgba(255, 255, 255, 0.001);;      	
         }
         .top-bar-section ul li.active > a {
           background: rgba(255, 255, 255, 0.001);
+          border-color: rgba(255, 255, 255, 0.5);
           color: #fff; }
           .top-bar-section ul li.active > a:hover {
             background: rgba(255, 255, 255, 0.001);
-            color: #46555D !important;
              }
         
         .top-bar-section ul li .js-generated {
           display: none; }
     .top-bar-section li.hover > a:not(.button) {
+    
 /*      background-color: #555555;
       background: #222222;*/
       color: #FFFFFF; }
@@ -2149,7 +2157,9 @@ meta.foundation-mq-topbar {
       .top-bar-section .dropdown li:not(.has-form):not(.active) > a:not(.button) {
 /*        background: #333333;*/
         color: #FFFFFF; }
-      .top-bar-section .dropdown li:not(.has-form):not(.active):hover > a:not(.button) {
+      .top-bar-section .dropdown li:not(.has-form):not(.active):hover > a:not(.button),
+      .top-bar-section .dropdown li.active:hover > a:not(.button),
+      .top-bar-section .dropdown li.active > a:not(.button) {
 /*        background-color: #555555;*/
         color: #46555D;
         background: transparent;
@@ -5596,6 +5606,8 @@ section.brown p.sub-text {
 
 section.white p em {
 	color: #CCC8C6;
+	display: block;
+	margin-bottom: 40px;
 }
 section.blue p {
 	color: #D6DDE2;
