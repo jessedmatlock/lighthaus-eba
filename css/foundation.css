@@ -5607,7 +5607,6 @@ section.brown p.sub-text {
 	font: normal 18px/1.4em "Ubuntu", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 	font-weight: lighter;
 	color: #9E9894;
-	
 }
 
 section.white p em {
@@ -5655,7 +5654,9 @@ section.background form input {
 	margin-bottom: 5px;
 }
 .benefit-icon {
-	margin-bottom: 20px;
+	display: block;
+	margin: 0 auto 30px;
+	border-bottom: 1px solid #B9C6CE;
 }
 
 
