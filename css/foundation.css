@@ -2721,10 +2721,10 @@ meta.foundation-mq-topbar {
 .panel {
   border-style: solid;
   border-width: 1px;
-  border-color: #d8d8d8;
+  border-color: #F5F4EC;
   margin-bottom: 1.25rem;
   padding: 40px;
-  background: #f2f2f2;
+  background: #F5F4EC;
   color: #392C26; }
 
 	.panel.blue {
@@ -2867,7 +2867,8 @@ meta.foundation-mq-topbar {
       color: #222222;
       font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
       font-size: 1rem;
-      padding: 1rem 2rem; }
+      padding: 1rem 2rem;
+      outline: none; }
       .tabs dd > a:hover,
       .tabs .tab-title > a:hover {
         background-color: #e1e1e1; }
@@ -2951,7 +2952,7 @@ form ul.pagination {
       border-radius: 3px;
       transition: background-color 300ms ease-out;
       background: none;
-      color: #999999;
+      color: #fff;
       display: block;
       font-size: 1em;
       font-weight: normal;
@@ -3182,8 +3183,8 @@ a {
 /* Default paragraph styles */
 p {
   font-family: inherit;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.4;
   margin-bottom: 30px;
   text-rendering: optimizeLegibility; }
   p.lead {
@@ -5555,7 +5556,7 @@ header {
 	right: 0;
 	z-index: 1;
 }
-
+section.content,
 section.blue,
 section.tan,
 section.brown,
@@ -5565,6 +5566,11 @@ section.background {
 	position: relative;
 	background: transparent url('../img/section-shadow.png') no-repeat center top;
 	z-index: 0;
+}
+section.content {
+	background: #fff;
+	color: #726C66;	
+	
 }
 section.med-padding {
 	padding: 50px 0;
@@ -5883,7 +5889,15 @@ social-icons li a {
 .member .member-content .member-company {
 	font-weight: 300;
 	font-size: 18px;
+	margin: 0 0 0px;
+}
+.member .member-content .member-industry {
+	font-weight: 300;
+	font-size: 18px;
 	margin: 0 0 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px dashed #B9C6CE;
+	
 }
 .member .member-content ul.member-meta {
 	margin: 0 0 10px;
@@ -5941,4 +5955,169 @@ social-icons li a {
 .icon-nav li a:hover,
 .icon-nav li a:hover img {
 	opacity: 1;
+}
+
+#search-form {
+	display: none;
+}
+
+#search-form .blue-form {
+	margin: 0;
+}
+
+#search-form .sort-by {
+	margin-bottom: 40px;
+}
+
+#profile {
+	position: relative;
+	padding: 0;
+}
+
+#profile .profile-thumb {
+	padding: 10px;
+	border: 1px solid #B9C6CE;
+	width: 154px;
+	height: 154px;
+	margin: 0 auto;
+}
+
+#profile .profile-thumb img {
+	width: 132px;
+	height: 132px;
+}
+#profile .profile-nav {
+	text-align: center;	
+}
+
+#profile .profile-nav a {
+	display: block;
+}
+
+#profile .profile-nav img {
+	display: block;
+	margin: 0 auto 10px;
+}
+
+#profile .profile-content {
+	
+}
+
+#profile .profile-content .profile-name {
+	margin: 0;
+	color: #E57B3E;	
+}
+
+#profile .profile-content .profile-company {
+	font-weight: 300;
+	margin: 0;
+}
+
+#profile .profile-content .profile-industry {
+	font-weight: 300;
+	border-bottom: 1px dashed #B9C6CE;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+#profile .profile-content [class*="block-grid-"] li  {
+	display: list-item;
+	list-style: square;
+	list-style-position: inside;
+}
+
+#profile .tabs {
+	
+}
+
+#profile .tabs a {
+	background: no-repeat;
+	color: #392C26;
+	font-weight: 300;
+	font-size: 18px;
+	border-bottom: 4px solid rgba(255, 255, 255, 0.0001);
+	padding: 0.5rem 1rem;
+	margin: 0 1rem 10px 0;
+}
+
+#profile .tabs a:hover {
+	border-color: #E67C3E;
+}
+
+#profile .tabs .active a {
+	border-color: #E67C3E;
+}
+
+#profile .tabs-content .panel p {
+	margin: 0;
+}
+#profile .tabs-content .panel ul.social-icons a {
+	color: #392C26;
+}
+#profile .tabs-content .panel ul.social-icons a:hover {
+	color: #E5793E;
+}
+
+table.striped {
+	font-family: "Ubuntu", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	border-collapse: collapse;
+	border: none;
+}
+table.striped th {
+	text-align: right;
+	color: #392C26;
+	font-weight: 400;
+}
+table.striped th,
+table.striped td {
+	font-size: 18px;
+	line-height: 1.5;
+	padding: 15px 10px;
+}
+table tr.even,
+table tr.alt,
+table tr:nth-of-type(even) {
+  background: #F5F4EC;
+ }
+
+@media only screen and (min-width: 64.0625em) {
+	#profile {
+		padding-left: 320px;
+	}
+	
+	#profile .profile-thumb {
+		padding: 10px;
+		border: 1px solid #B9C6CE;
+		width: 287px;
+		height: 287px;
+		margin: 0 auto;
+	}
+	
+	#profile .profile-thumb img {
+		width: 265px;
+		height: 265px;
+	}
+	#profile .profile-nav {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: auto;
+	}
+	
+	#profile .profile-nav a {
+		
+	}
+	
+	#profile .profile-nav img {
+		
+	}
+	#profile .profile-content [class*="block-grid-"] {
+		margin-left: 0;
+	}
+	#profile .profile-content [class*="block-grid-"] li {
+		padding-bottom: 0;padding-left: 0;
+	}
+
 }
