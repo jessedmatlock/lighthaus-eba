@@ -45,9 +45,10 @@
 	<section id="apply" class="blue">
 		<div class="row">
 		    <div class="small-12 medium-12 large-12 columns">
+		<?php if(!isset($_POST['submit'])):  ?>
+
 				<h1 class="text-center">Apply For Membership Today</h1>
 				<p class="text-center">Enter your contact information below to connect with the EBA.</p>
-				<?php if(!isset($_POST['submit'])):  ?>
 				<form action="#apply" method="POST" accept-charset="utf-8" data-abide enctype="multipart/form-data">
 					<div class="row">
 					    <div class="small-12 medium-6 large-6 columns">
@@ -179,8 +180,9 @@
 					</div><!-- end row -->
 					
 				</form>
-				<?php else:
-					
+				<?php else: ?>
+					<h1 class="text-center">Thank you for registering!</h1>
+				<?php 						
 					$fname = isset($_POST['fname']) ? stripslashes(trim($_POST['fname'])) : '';
 					$lname = isset($_POST['lname']) ? stripslashes(trim($_POST['lname'])) : '';
 					$workphone = isset($_POST['workphone']) ? stripslashes(trim($_POST['workphone'])) : '';

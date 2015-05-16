@@ -1358,12 +1358,13 @@ form.blue-form {
 	background: #748D9D;
 	color: #fff;
 	padding: 40px;
+	margin-bottom: 20px;
 }
 form.blue-form h1,
 form.blue-form h2, 
 form.blue-form h3,
 form.blue-form p,
-form.blue-form ul li a {
+form.blue-form a {
 	color: #fff;
 }
 /* Using forms within rows, we need to set some defaults */
@@ -2692,9 +2693,22 @@ meta.foundation-mq-topbar {
   border-width: 1px;
   border-color: #d8d8d8;
   margin-bottom: 1.25rem;
-  padding: 1.25rem;
+  padding: 40px;
   background: #f2f2f2;
   color: #392C26; }
+
+	.panel.blue {
+		background: #748D9D;
+		border-color: #748D9D;		
+		color: #fff;
+		margin-bottom: 40px;
+	}
+	.panel.blue h1,
+	.panel.blue h2,
+	.panel.blue h3,
+	.panel.blue p {
+		color: #fff;
+	}
   .panel > :first-child {
     margin-top: 0; }
   .panel > :last-child {
@@ -3196,12 +3210,16 @@ hr {
   clear: both;
   height: 0;
   margin: 1.25rem 0 1.1875rem; }
+.no-margin {
+ 	margin: 0;
+ }
 .orange-text {
 	color: #E67C3E;
 }
 .brown-text {
 	color: #392C26;
 }
+
 .display-block {
 	display: block;
 }
@@ -3298,6 +3316,10 @@ abbr {
     border-bottom: 1px dotted #DDDDDD; }
 
 /* Blockquotes */
+cite {
+	color: #E57B3E;
+	font-size: 22px;
+}
 blockquote {
   margin: 0 0 1.25rem;
   padding: 0.5625rem 1.25rem 0 1.1875rem;
@@ -3311,7 +3333,6 @@ blockquote {
     blockquote cite a,
     blockquote cite a:visited {
       color: #555555; }
-
 blockquote,
 blockquote p {
   line-height: 1.6;
@@ -5535,9 +5556,12 @@ section.white p,
 section.blue p,
 section.tan p,
 section.brown p {
-	font: normal 24px/1.5em "Ubuntu", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+	font: 300 24px/1.4em "Ubuntu", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 	font-weight: lighter;
 	color: rgba(255, 255, 255, .7);
+}
+section.white p {
+	color: #C3BFBD;	
 }
 section.white p.sub-text,
 section.blue p.sub-text,
@@ -5722,6 +5746,9 @@ social-icons li a {
 #inner-header #inner-nav li {
 	text-align: center;
 }
+#inner-header #inner-nav.text-nav {
+	margin-top: 60px;
+}
 #inner-header #inner-nav li a {
 	text-align: center;
 	color: #939393;
@@ -5789,10 +5816,11 @@ social-icons li a {
 	position: relative;
 	padding: 50px 0 50px 0;	
 	text-align: center;
-	border-bottom: 1px solid #B9C6CE;
-	
+	border-bottom: 1px solid #B9C6CE;	
 }
-
+.member:last-child {
+	margin-bottom: 40px;
+}
 .member .member-thumb {
 	padding: 10px;
 	border: 1px solid #B9C6CE;

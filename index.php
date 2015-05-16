@@ -128,7 +128,7 @@
 		<div class="row">
 		    <div class="small-12 medium-12 large-12 columns">
 		        <h2 class="">A personal members-only dashboard that connects you to what’s important </h2>
-				<p>Each EBA member get access to their own private networking dashboard that can be customized to show only the videos, articles, and connections that they want to see. It aslo gives each member easy access to search and network with all other members and all of the special offers that are available.</p>	
+				<p>Each EBA member get access to their own private networking dashboard that can be customized to show only the videos, articles, and connections that they want to see. It also gives each member easy access to search and network with all other members and all of the special offers that are available.</p>	
 				<ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-9">
 					<li><img src="img/brown-icon-1.png"  class=""  alt="" /></li>
 					<li><img src="img/brown-icon-2.png"  class=""  alt="" /></li>
@@ -144,22 +144,20 @@
 		    </div><!-- end columns -->
 		</div><!-- end row -->
 	</section><!-- end section #.class_name -->
-	<?php /*
 	<section class="white text-center">
 		<div class="row">
 		    <div class="small-12 medium-12 large-12 columns">
 		        <h2 class="">Stay connected with us</h2>
 				<ul class="social-icons">
-				  <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-				  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-				  <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-				  <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
-				  <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+				  <li><a href="https://www.facebook.com/executivebusinessalliance" target="_blank"><i class="fa fa-facebook"></i></a></li>
+				  <li><a href="https://twitter.com/execbizalliance" target="_blank"><i class="fa fa-twitter"></i></a></li>
+				  <li><a href="https://plus.google.com/u/0/b/112574438292622719899/112574438292622719899/about" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+				  <!--li><a href="#"><i class="fa fa-linkedin-square"></i></a></li-->
+				  <li><a href="https://www.youtube.com/channel/UCfTMVslbgfL_xwGfQPhDDjA" target="_blank"><i class="fa fa-youtube"></i></a></li>
 				</ul>
 		    </div><!-- end columns -->
 		</div><!-- end row -->
 	</section><!-- end section #.white -->
-	*/ ?>
 	<section id="footer" class="tan">
 		<div class="row">
 		    <div class="small-width medium-12 large-4 columns">
