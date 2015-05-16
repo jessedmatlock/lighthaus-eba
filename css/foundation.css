@@ -1177,7 +1177,14 @@ button, .button {
   color: #FFFFFF;
   transition: background-color 300ms ease-out;
   letter-spacing: 1px; }
- 
+ button.button-centered,
+ .button.button-centered {
+ 	margin-left: auto !important;
+ 	margin-right: auto !important;
+	width: 350px !important;
+	max-width: 100%;
+	display: block;
+ }
 form button,
 form .button {
   padding: 0.65rem 2.5rem 0.85rem 2.5rem;
@@ -1799,6 +1806,9 @@ meta.foundation-mq-topbar {
   .top-bar .title-area {
     margin: 0;
     position: relative; }
+    .top-bar .title-area #logo {
+    	height: 2.125rem
+    }
   .top-bar .name {
     font-size: 16px;
     height: 2.8125rem;
@@ -1893,12 +1903,15 @@ meta.foundation-mq-topbar {
       padding: 12px 0 12px 0.9375rem;
       text-transform: none;
       width: 100%; }
-      #header .top-bar-section ul.right > li:hover > a {
+      #header .top-bar-section ul.right > li:hover > a,
+      #header .top-bar-section ul.right > li.has-dropdown:hover > a {
       	color: #fff !important;
+      	background: rgba(255, 255, 255, 0.0001);   
       }
-    .top-bar-section ul li:hover:not(.has-form) > a {
+    .top-bar-section > ul > li:hover:not(.has-form) > a,
+    .top-bar-section ul li.has-dropdown:hover > a {
       color: #fff;
-      background: rgba(0, 0, 0, 0.65); 
+      background: rgba(0, 0, 0, 0.65) !important; 
       }
     .top-bar-section ul li.active > a {
       background: rgba(255, 255, 255, 0.1);
@@ -1991,9 +2004,15 @@ meta.foundation-mq-topbar {
 	.contain-to-grid {
 		background: rgba(255, 255, 255, 0.001);
 	}
+	header #logo {
+		height: auto !important;
+	}
   .top-bar {
     background: rgba(255, 255, 255, 0.01);
-    overflow: visible; }
+    overflow: visible; 
+      height: 6rem;
+      padding-top: 10px;
+    }
     .top-bar:before, .top-bar:after {
       content: " ";
       display: table; }
@@ -2028,7 +2047,8 @@ meta.foundation-mq-topbar {
 
   .top-bar-section {
     transition: none 0 0;
-    left: 0 !important; }
+    left: 0 !important;
+    margin-top: 20px; }
     .top-bar-section ul {
       display: inline;
       height: auto !important;
@@ -3154,7 +3174,7 @@ p {
   font-family: inherit;
   font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 1.25rem;
+  margin-bottom: 30px;
   text-rendering: optimizeLegibility; }
   p.lead {
     font-size: 1.21875rem;
@@ -5525,6 +5545,7 @@ header {
 	right: 0;
 	z-index: 1;
 }
+
 section.blue,
 section.tan,
 section.brown,
@@ -5561,7 +5582,7 @@ section.brown p {
 	color: rgba(255, 255, 255, .7);
 }
 section.white p {
-	color: #C3BFBD;	
+	color: #726C66;	
 }
 section.white p.sub-text,
 section.blue p.sub-text,
@@ -5603,6 +5624,12 @@ section#homepage {
 section#homepage #logo {
 	margin-top: 200px;
 }
+
+section#subpage {
+	background: url('../img/sub-header.jpg') no-repeat left top;
+	min-height: 400px;
+}
+
 section.background form {
 	padding: 40px 0 0px;
 }
