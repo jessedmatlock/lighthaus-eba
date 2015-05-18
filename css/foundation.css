@@ -5738,8 +5738,8 @@ a.down-arrow:focus {
 	text-align: center;
 }
 #landing-intro.short-intro {
-	height: auto;
-	min-height: 0;
+	height: auto !important;
+	min-height: 0 !important;
 }
 #landing-intro p,
 #landing-intro h1 {
