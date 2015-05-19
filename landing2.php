@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-	<title></title>
+	<title>Online Executive Business Networking | EBA</title>
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta name="author" content="revivemarketing.org" />
-	<meta name="keywords" lang="en-us" content="" />
-	<meta name="date" content="2012-01-01T08:49:37+00:00" />
-	<meta name="description" content="" />
+	<meta name="keywords" lang="en-us" content="online networking, online business networking, online executive networking, virtual networking, ceo networking, ceo peer groups, ceo networking groups, online business networking, entrepreneur networking" />
+	<meta name="date" content="2015-01-01T08:49:37+00:00" />
+	<meta name="description" content="EBA is an online executive business networking group that connects executives and CEOs, and gives them the online tools to network and make connections to grow their business and achieve their business goals." />
 	<meta name="robots" content="index, follow" />
 	<meta name="copyright" content="Copyright © 2015 All Rights Reserved" />
 	<meta name="google-site-verification" content="">
@@ -259,7 +259,7 @@
 		<div class="row">
 		    <div class="small-12 medium-12 large-12 columns text-center">
 				<img src="img/footer-logo.png"  class="" id="footer-logo"  alt="" />
-				<div id="copy">© 2015 Executive Business Alliance. This website was created by <a href="http://lighthausdesign.com"  class="">Lighthaus Design</a>.</div><!-- end div#copy -->
+				<div id="copy">© 2015 Executive Business Alliance.</div><!-- end div#copy -->
 		    </div><!-- end columns -->
 		</div><!-- end row -->
 		
