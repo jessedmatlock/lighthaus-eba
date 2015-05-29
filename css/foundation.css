@@ -3243,7 +3243,7 @@ hr {
   height: 0;
   margin: 1.25rem 0 1.1875rem; }
 .no-margin {
- 	margin: 0;
+ 	margin-bottom: 0 !important;
  }
 .orange-text {
 	color: #E67C3E;
@@ -3267,7 +3267,7 @@ b {
   line-height: inherit; }
 
 small {
-  font-size: 60%;
+  font-size: 75%;
   line-height: inherit; }
 
 code {
@@ -5579,12 +5579,11 @@ section.med-padding {
 section.blue h1,
 section.blue h2,
 section.blue h3,
-section.tan h1,
-section.tan h2,
-section.tan h3,
+section.blue h4,
 section.brown h1,
 section.brown h2,
 section.brown h3,
+section.brown h4,
 section.background h1,
 section.background h2,
 section.background h3 {
