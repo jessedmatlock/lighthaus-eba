@@ -1740,11 +1740,13 @@ input[type="file"] {
 
 .file-wrapper {
 	position: relative;
+	height: 3.2rem;
 }
 .file-wrapper input[type="file"] {
 	position: absolute;
 	z-index: 0;
 	top: 0;
+	height: 3.2rem;
 }
 .file-wrapper .input-cover {
 	position: absolute;
