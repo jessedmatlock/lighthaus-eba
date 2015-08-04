@@ -126,7 +126,7 @@
 									    <label>
 											<div class="file-wrapper">
 												<input type="text" value="" placeholder="UPLOAD PHOTO" class="input-cover" />
-												<input type="file" name="photo"  id="photo" value="" required class="no-margin" />
+												<input type="file" name="photo"  id="photo" value="" class="no-margin" required />
 											</div><!-- end div.file-wrapper -->
 				 							<small class="error">A Photo is required. .jpg, .png or .gif formats allowed.</small>
 										</label>																		    
@@ -149,7 +149,7 @@
 						    </div><!-- end columns -->
 						    <div class="small-12 medium-6 large-6 columns">
 							<label>
-						        <input type="text" name="password2"  id="password2" value="" placeholder="RE-TYPE PASSWORD" data-equalto="password" pattern="[a-zA-Z0-9]+" class="no-margin"/>
+						        <input type="text" name="password2"  id="password2" value="" placeholder="RE-TYPE PASSWORD" required data-equalto="password" pattern="[a-zA-Z0-9]+" class="no-margin"/>
 								<small class="error">The password did not match</small>
 							</label>
 							
@@ -208,7 +208,9 @@
 						<div class="row">
 						    <div class="small-12 medium-12 large-12 columns">
 							<label>
-						        <input type="text" name="caddress"  id="caddress" value="" placeholder="COMPANY ADDRESS" />
+						        <input type="text" name="caddress"  id="caddress" value="" required placeholder="COMPANY ADDRESS" />
+						  		<small class="error">A valid Company Address is required.</small>
+						
 						    </div><!-- end columns -->
 
 						</div><!-- end row -->
@@ -315,7 +317,7 @@
 								        <label>
 											<div class="file-wrapper">
 												<input type="text" value="" placeholder="COMPANY LOGO" class="input-cover" />
-												<input type="file" name="logo"  id="logo" value="" required class="no-margin" />
+												<input type="file" name="logo" id="logo" value="" required class="no-margin" />
 											</div><!-- end div.file-wrapper -->
 				 							<small class="error">A Company Logo is required. .jpg, .png or .gif formats allowed.</small>
 										</label>										
@@ -340,9 +342,8 @@
 						<div class="row">
 						    <div class="small-12 medium-12 large-12 columns">
 							<label>
-						        <textarea name="details" id="details" class="details" rows="4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu metus sit amet enim varius acliquam sit amet eget lacus. Integer eget purus ut arcu facilisis scelerisque a ut nisi. Integer a purus vestibulum, accumsan libero rhoncus, efficitur tellus. Vestibulum in lorem in lorem vehicula laoreet. Nulla placerat velit dignissim ex blandit interdum. Mauris a ullamcorper justo, nec commodo nisi.
-						        </textarea>
-						  		<small class="error">A valid detail is required.</small>
+						        <textarea name="details" id="details" rows="4" required>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu metus sit amet enim varius acliquam sit amet eget lacus. Integer eget purus ut arcu facilisis scelerisque a ut nisi. Integer a purus vestibulum, accumsan libero rhoncus, efficitur tellus. Vestibulum in lorem in lorem vehicula laoreet. Nulla placerat velit dignissim ex blandit interdum. Mauris a ullamcorper justo, nec commodo nisi.</textarea>
+						  		<small class="error">A valid Company Detail is required.</small>
 							</label>
 						    </div><!-- end columns -->
 						</div><!-- end row -->
@@ -352,7 +353,7 @@
 						<div class="row">
 						    <div class="small-12 medium-12 large-12 columns">
 							<label>
-								<input type="text" name="cproducts"  id="cproducts" value="" placeholder="PRODUCT/SERVICE" class="no-margin" />
+								<input type="text" name="cproducts"  id="cproducts" value="" placeholder="PRODUCT/SERVICE" class="no-margin" required />
 						  		<small class="error">A valid product/service is required.</small>
 							</label>
 						    </div><!-- end columns -->
@@ -367,13 +368,13 @@
 						<div class="row">
 						    <div class="small-12 medium-6 large-6 columns">
 							<label>
-								<input type="text" name="linkedin"  id="linkedin" value="" placeholder="LINKEDIN" />
+								<input type="text" name="linkedin"  id="linkedin" value="" placeholder="LINKEDIN" required />
 						  		<small class="error">A valid LINKEDIN URL is required.</small>
 							</label>
 						    </div><!-- end columns -->
 						    <div class="small-12 medium-6 large-6 columns">
 							<label>
-								<input type="text" name="facebook"  id="facebook" value="" placeholder="FACEBOOK" />
+								<input type="text" name="facebook"  id="facebook" value="" placeholder="FACEBOOK" required />
 						  		<small class="error">A valid FACEBOOK URL is required.</small>
 							</label>
 						    </div><!-- end columns -->
@@ -381,13 +382,13 @@
 						<div class="row">
 						    <div class="small-12 medium-6 large-6 columns">
 							<label>
-								<input type="text" name="google"  id="google" value="" placeholder="GOOGLE+" />
+								<input type="text" name="google"  id="google" value="" placeholder="GOOGLE+" required />
 						  		<small class="error">A valid GOOGLE+ URL is required.</small>
 							</label>
 						    </div><!-- end columns -->
 						    <div class="small-12 medium-6 large-6 columns">
 							<label>
-								<input type="text" name="twitter"  id="twitter" value="" placeholder="TWITTER" />
+								<input type="text" name="twitter"  id="twitter" value="" placeholder="TWITTER" required />
 						  		<small class="error">A valid TWITTER URL is required.</small>
 							</label>
 						    </div><!-- end columns -->
@@ -395,13 +396,13 @@
 						<div class="row">
 						    <div class="small-12 medium-6 large-6 columns">
 							<label>
-								<input type="text" name="pinterest"  id="pinterest" value="" placeholder="PINTEREST" />
+								<input type="text" name="pinterest"  id="pinterest" value="" placeholder="PINTEREST" required />
 						  		<small class="error">A valid PINTEREST URL is required.</small>
 							</label>
 						    </div><!-- end columns -->
 						    <div class="small-12 medium-6 large-6 columns">
 							<label>
-								<input type="text" name="instagram"  id="instagram" value="" placeholder="INSTAGRAM" />
+								<input type="text" name="instagram"  id="instagram" value="" placeholder="INSTAGRAM" required />
 						  		<small class="error">A valid INSTAGRAM URL is required.</small>
 							</label>
 						    </div><!-- end columns -->
@@ -409,7 +410,7 @@
 						<div class="row">
 						    <div class="small-12 medium-6 large-6 columns end">
 							<label>
-								<input type="text" name="youtube"  id="youtube" value="" placeholder="YOUTUBE" class="no-margin" />
+								<input type="text" name="youtube"  id="youtube" value="" placeholder="YOUTUBE" class="no-margin" required />
 						  		<small class="error">A valid YOUTUBE URL is required.</small>
 							</label>
 						    </div><!-- end columns -->
